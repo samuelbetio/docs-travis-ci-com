@@ -1,69 +1,46 @@
-# About this repository [![Build Status](https://travis-ci.org/travis-ci/docs-travis-ci-com.svg?branch=master)](https://travis-ci.org/travis-ci/docs-travis-ci-com)
+# HEXA-A Test Tool
+HEXA-A Test Tool is simple GUI Test Tool that is used to get the Generated Output after running certain program under any input parameters and compare it with stored Expected Output of each Test Case.
+>It uses the concept of Black-box Testing.
 
-This is the documentation site for Travis CI! (<http://docs.travis-ci.com/>)
+The main target is 3rd year students of Electronics and Communication Department, Faculty of Engineering - Cairo University, To easily test their C++ assignments with multiple Test Cases.
 
-## How to contribute
+![Home](https://cloud.githubusercontent.com/assets/18114443/23592239/6a2f1218-0206-11e7-9579-bf727403ddae.PNG)
 
-Fork the repository, read the rest of this README file and make some changes.
-Once you're done with your changes send a pull request. Thanks!
+## Downloads
+* [Windows Version](http://www.hexa-a.com/HEXA-A.Test.Tool.v1.0.(Windows).zip)
+* [Linux Version](http://www.hexa-a.com/HEXA-A.Test.Tool.v1.0.(Linux).zip)
 
-## How to check your edit before sending PR
+## Using The Tool
 
-You can inspect how your edits will be reflected by the documentation site.
+### Windows
+1. Open Tool File: ```HEXA-A.exe``` 
+1. Select Test Case
+1. Select the Program you want to Test _(EXE File)_
+1. Click **Start Test**
 
-### Install dependencies
+### Linux
+> First Time Only, You need to run setupHEXA script to install all requirements automatically: ```sudo bash setupHEXA.sh```
 
-1. Make sure you have Ruby and RubyGems installed.
+1. Open Tool Script:
+```python3 HEXA-A.py```
+1. Select Test Case
+1. Select the Program you want to Test _(.out File)_
+1. Click **Start Test**
 
-1. Install [bundler](http://bundler.io/):
+## Build EXE File for Windows
 
-    ```sh-session
-    $ gem install bundler
-    ```
+### Build Requirements
+* __Python 3.5 or earlier__
+* __PyQt 5__
+* __PyInstaller 3.2.1__
 
-1. Install application dependencies:
-
-    ```sh-session
-    $ bundle install --binstubs
-    ```
-
-### Generate documentation
-
-Run
-
-```sh-session
-$ ./bin/jekyll build
+### Build Steps
+* From __CMD__:
 ```
+pyinstaller --onefile --windowed HEXAmain.py
+```
+* Copy (icons) Folder to (dist) Folder before opening the Tool.
 
-
-### Run application server
-
-You are now ready to start your documentation site, using Jekyll or Puma.
-For documentation edits, Jekyll is sufficient.
-
-#### Starting and inspecting edits with Jekyll
-
-1. Run Jekyll server:
-
-    ```sh-session
-    $ ./bin/jekyll serve
-    ```
-
-1. Open [localhost:4000](http://localhost:4000/) in your browser.
-
-#### Starting and inspecting edits with Puma
-
-For more programmatical PRs (such as handling webhooks notification
-via POST), Puma is necessary.
-
-1. Run Puma server:
-
-    ```sh-session
-    $ ./bin/puma
-    ```
-
-1. Open [localhost:9292](http://localhost:9292/) in your browser.
-
-## License
-
-Distributed under the [MIT license](https://opensource.org/licenses/MIT); the same as other Travis CI projects.
+## Online Version
+* [Online Test Tool](http://www.hexa-a.com)
+* [Source Code](https://github.com/hexa-a/TestToolOnline)
